@@ -1,11 +1,10 @@
 <template>
-  <main class="columns is-gapless is-multiline" :class="{ 'modo-escuro': modoEscuroAtivo }">
       <Formulario @aoSalvarTarefa="salvarTarefa"/>
       <div class="lista">
-        <Tarefa v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa"/>
         <Box v-if="listaEstaVazia">
-          Você não está muito produtivo hoje :(
+        <span>voce nao esta produtivo hj</span>
         </Box>
+         <Tarefa v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa"/>
       </div>
 </template>
 
@@ -39,4 +38,5 @@ export default defineComponent({
     },
   }
 });
+</script>
 
